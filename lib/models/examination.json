@@ -1,0 +1,34 @@
+
+  [  {
+      "courseCode": "CS312",
+      "venue": "LRB 105",
+      "startExam": "8:00",
+      "endExam": "11:00"
+    },
+    
+     {
+    "courseCode": "CD312",
+      "venue": "LRB 106",
+      "startExam": "8:00",
+      "endExam": "11:00"
+    },
+    
+    
+      {"courseCode": "CS111",
+      "venue": "Auditorium",
+      "startExam": "8:00",
+      "endExam": "11:00"},
+    
+    
+     { "courseCode": "BT111",
+      "venue": "LRA 102",
+      "startExam": "8:00",
+      "endExam": "11:00"},
+    
+    
+      {"courseCode": "CS214",
+      "venue": "LRB 004C",
+      "startExam": "8:00",
+      "endExam": "11:00"}
+    
+    ]
