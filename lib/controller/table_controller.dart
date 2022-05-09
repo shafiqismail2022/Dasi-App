@@ -10,12 +10,12 @@ import '../views/authentication_page.dart';
 class ExamData extends DataTableSource {
   // Generate some made-up data
   final List<Map<String, dynamic>> _data = List.generate(
-    DUMMY_EXAM.DummyExamList.length,
+    DUMMY_EXAM.dummyExamList.length,
     (index) => {
-      "courseCode": DUMMY_EXAM.DummyExamList[index].courseCode,
-      "venue": DUMMY_EXAM.DummyExamList[index].venue,
-      "startExam": DUMMY_EXAM.DummyExamList[index].startExam,
-      "endExam": DUMMY_EXAM.DummyExamList[index].endExam,
+      "courseCode": DUMMY_EXAM.dummyExamList[index].courseCode,
+      "venue": DUMMY_EXAM.dummyExamList[index].venue,
+      "startExam": DUMMY_EXAM.dummyExamList[index].startExam,
+      "endExam": DUMMY_EXAM.dummyExamList[index].endExam,
     },
   );
 

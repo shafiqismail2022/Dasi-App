@@ -1,8 +1,10 @@
 import 'dart:ui';
 
+import 'package:dasiapp/views/depatrment.dart';
 import 'package:dasiapp/views/forgetPassword.dart';
 import 'package:dasiapp/views/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -19,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
         //mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             minRadius: 35,
             backgroundColor: Color(0xff4B72D9),
             child: Text(
@@ -27,11 +29,11 @@ class _LoginPageState extends State<LoginPage> {
               style: TextStyle(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           Container(
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 28,
             ),
             child: Form(
@@ -54,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   TextFormField(
@@ -75,8 +77,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context)
-        .pushNamed(ForgotPassword.routeName);
+                      Navigator.of(context).pushNamed(ForgotPassword.routeName);
                     },
                     child: const Text(
                       'Forgot password',
@@ -89,7 +90,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           ElevatedButton(
@@ -100,8 +101,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             onPressed: () {
-             Navigator.of(context)
-        .pushNamed(Homepage.routeName);
+              Navigator.of(context).pushNamed(DepartmentPage.routeName);
             },
             child: const Text('Login'),
           ),

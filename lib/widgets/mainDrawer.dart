@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:dasiapp/views/changePassword.dart';
+
 import '../views/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +62,7 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xff4B72D9),
             ),
             buildListTile('Change Password', Icons.key_outlined, () {
-              // Navigator.of(context).pushReplacementNamed('/');
+              Navigator.of(context).pushReplacementNamed(ChangePasswordPage.routeName);
             }),
             const Divider(
               color: Color(0xff4B72D9),

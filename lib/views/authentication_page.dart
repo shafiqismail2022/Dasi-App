@@ -38,7 +38,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
     return Scaffold(
       drawer: MainDrawer(),
       appBar: AppBar(
-        title: const Text("Authentication"),
+        title: const Text("Student Authenticity"),
         centerTitle: true,
         backgroundColor: Color(0xff4B72D9),
       ),
@@ -83,7 +83,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
             ),
             Column(
               children: [
-                buildText("Attendance Validation"),
+                buildText("Student-Booklet Maping"),
                 GestureDetector(
                     onTap: () => Get.to(AttendancePage()),
                     child: buildImage("lib/assets/images/TextScanning.png")),

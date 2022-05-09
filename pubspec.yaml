@@ -40,6 +40,7 @@ dependencies:
   learning_text_recognition: ^0.0.4
   provider: ^6.0.2
   flutter_mobile_vision: ^0.1.4+1
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

@@ -14,7 +14,7 @@ class Examination {
 }
 
 class DUMMY_EXAM {
-  static List<Examination> DummyExamList = [
+  static List<Examination> dummyExamList = [
     Examination(
       courseCode: 'CS312',
       venue: 'LRB 105',

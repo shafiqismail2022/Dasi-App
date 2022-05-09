@@ -1,3 +1,7 @@
+import 'package:dasiapp/views/UndefinedView.dart';
+import 'package:dasiapp/views/changePassword.dart';
+import 'package:dasiapp/views/depatrment.dart';
+
 import './views/authentication_page.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -24,8 +28,13 @@ class MyApp extends StatelessWidget {
         '/': (ctx) => LoginPage(),
         ForgotPassword.routeName: (ctx) => ForgotPassword(),
         Homepage.routeName: (ctx) => Homepage(),
+        DepartmentPage.routeName: (ctx) => DepartmentPage(),
+        ChangePasswordPage.routeName: (ctx) => ChangePasswordPage(),
         // AuthenticstionPage.routeName: (ctx) => AuthenticstionPage(),
       },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => UndefinedViewPage(),
+      ),
     );
   }
 }
