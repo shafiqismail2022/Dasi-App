@@ -32,6 +32,7 @@ class DepartmentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color(0xffEAD8D8),
       appBar: AppBar(
         backgroundColor: const Color(0xff4B72D9),
         title: const Text("Choose Department"),

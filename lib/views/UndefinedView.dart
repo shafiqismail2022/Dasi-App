@@ -10,6 +10,7 @@ class UndefinedViewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
+      // backgroundColor: Color(0xffEAD8D8),
       // drawer: MainDrawer(),
       appBar: AppBar(
         backgroundColor: const Color(0xff4B72D9),

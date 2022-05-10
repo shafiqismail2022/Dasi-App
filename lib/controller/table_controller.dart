@@ -1,6 +1,7 @@
 import 'package:dasiapp/models/student.dart';
 import 'package:dasiapp/views/Tab_Screen.dart';
 import 'package:dasiapp/views/ocr_textRecognition.dart';
+import 'package:dasiapp/views/option_scanning.dart';
 import 'package:dasiapp/views/qr_code_scanner.dart';
 import 'package:flutter/material.dart';
 import '../models/examination.dart';
@@ -83,19 +84,19 @@ class StudentData extends DataTableSource {
     return DataRow(cells: [
       DataCell(
         Text(data[index]['registrationNo'].toString()),
-        onTap: () => Get.to(TabsScreen()),
+        onTap: () => Get.to(const ScanningOption()),
       ),
       DataCell(
         Text(data[index]["fullName"].toString()),
-        onTap: () => Get.to(TabsScreen()),
+        onTap: () => Get.to(const ScanningOption()),
       ),
       DataCell(
         Text(data[index]["courseCode"].toString()),
-        onTap: () => Get.to(TabsScreen()),
+        onTap: () => Get.to(const ScanningOption()),
       ),
       DataCell(
         Text(data[index]["yearOfStudy"].toString()),
-        onTap: () => Get.to(TabsScreen()),
+        onTap: () => Get.to(const ScanningOption()),
       ),
     ]);
   }

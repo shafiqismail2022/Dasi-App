@@ -36,6 +36,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color(0xffEAD8D8),
       drawer: MainDrawer(),
       appBar: AppBar(
         title: const Text("Student Authenticity"),

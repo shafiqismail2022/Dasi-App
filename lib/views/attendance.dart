@@ -61,6 +61,7 @@ class _AttendancePageState extends State<AttendancePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color(0xffEAD8D8),
       drawer: MainDrawer(),
       appBar: AppBar(
         centerTitle: true,

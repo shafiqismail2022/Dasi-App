@@ -1,6 +1,9 @@
+import 'package:dasiapp/views/Tab_Screen.dart';
 import 'package:dasiapp/views/UndefinedView.dart';
 import 'package:dasiapp/views/changePassword.dart';
 import 'package:dasiapp/views/depatrment.dart';
+import 'package:dasiapp/views/option_scanning.dart';
+import 'package:dasiapp/views/qr_code_scanner.dart';
 
 import './views/authentication_page.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -30,6 +33,10 @@ class MyApp extends StatelessWidget {
         Homepage.routeName: (ctx) => Homepage(),
         DepartmentPage.routeName: (ctx) => DepartmentPage(),
         ChangePasswordPage.routeName: (ctx) => ChangePasswordPage(),
+        QrScanner.routeName: (ctx) => QrScanner(),
+        ScanningOption.routeName: (ctx) => ScanningOption(),
+        TabsScreen.routeName: (ctx) => TabsScreen(),
+
         // AuthenticstionPage.routeName: (ctx) => AuthenticstionPage(),
       },
       onUnknownRoute: (settings) => MaterialPageRoute(

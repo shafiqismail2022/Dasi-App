@@ -5,6 +5,7 @@ import 'package:dasiapp/views/qr_code_scanner.dart';
 import 'package:flutter/material.dart';
 
 class TabsScreen extends StatefulWidget {
+  static const routeName='/Tab-Option';
   @override
   State<TabsScreen> createState() => _TabsScreenState();
 }
