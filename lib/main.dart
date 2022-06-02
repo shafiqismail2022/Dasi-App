@@ -4,6 +4,7 @@ import 'package:dasiapp/views/changePassword.dart';
 import 'package:dasiapp/views/depatrment.dart';
 import 'package:dasiapp/views/option_scanning.dart';
 import 'package:dasiapp/views/qr_code_scanner.dart';
+import 'package:dasiapp/views/student_detail_page.dart';
 
 import './views/authentication_page.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         QrScanner.routeName: (ctx) => QrScanner(),
         ScanningOption.routeName: (ctx) => ScanningOption(),
         TabsScreen.routeName: (ctx) => TabsScreen(),
+        StudentDetailPage.routeName: (ctx) => const StudentDetailPage(),
 
         // AuthenticstionPage.routeName: (ctx) => AuthenticstionPage(),
       },

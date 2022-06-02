@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 
-
 class DasiPagnatedDataTable extends StatefulWidget {
   final String title1;
   final String title2;
@@ -65,10 +64,10 @@ class _DasiPagnatedDataTableState extends State<DasiPagnatedDataTable> {
         DataColumn(label: Text(widget.title3)),
         DataColumn(label: Text(widget.title4)),
       ],
-      columnSpacing: 35,
-      horizontalMargin: 5,
-      rowsPerPage: widget.tableTitle != "LIST OF EXAMINATIONS"   
-          ? 9
+      columnSpacing: 60,
+      horizontalMargin: 10,
+      rowsPerPage: widget.tableTitle != "LIST OF EXAMINATIONS"
+          ? 15
           : devMediaquery.height > 731
               ? 12
               : 5,

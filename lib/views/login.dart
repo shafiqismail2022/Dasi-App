@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:dasiapp/views/depatrment.dart';
 import 'package:dasiapp/views/forgetPassword.dart';
 import 'package:dasiapp/views/homepage.dart';
+import 'package:dasiapp/views/student_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -103,6 +104,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
             onPressed: () {
               Navigator.of(context).pushNamed(DepartmentPage.routeName);
+             // Navigator.of(context).pushNamed(StudentDetailPage.routeName);
             },
             child: const Text('Login'),
           ),

@@ -2,6 +2,7 @@ import 'package:dasiapp/controller/table_controller.dart';
 import 'package:dasiapp/widgets/exam_table.dart';
 import 'package:dasiapp/widgets/mainDrawer.dart';
 import 'package:flutter/material.dart';
+import '../models/student.dart';
 
 class AttendancePage extends StatefulWidget {
   AttendancePage({Key? key}) : super(key: key);
@@ -67,12 +68,13 @@ class _AttendancePageState extends State<AttendancePage> {
         centerTitle: true,
         backgroundColor: Color(0xff4B72D9),
         title: customizeinput('Search', Colors.white, () {}),
-        actions: [
+       actions: [
           IconButton(
             onPressed: () {
-              setState(() {
-                isClicked ? isClicked = false : isClicked = true;
-              });
+              // setState(() {
+              // isClicked ? isClicked = false : isClicked = true;
+              showSearch(context: context, delegate: CustomSearch());
+              // });
             },
             icon: Icon(Icons.search),
           )
@@ -88,6 +90,68 @@ class _AttendancePageState extends State<AttendancePage> {
           title4: title4,
         ),
       ),
+    );
+  }
+}
+
+class CustomSearch extends SearchDelegate {
+  List<Student> exams = DummyStudent.dummyStudentList ;
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    return [
+      IconButton(
+        onPressed: () {
+          query = '';
+        },
+        icon: const Icon(Icons.clear),
+      )
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    return IconButton(
+        onPressed: () {
+          close(context, null);
+        },
+        icon: const Icon(Icons.arrow_back));
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    List<Student> examFetch = [];
+
+    // final res = Ema
+    for (var item in exams) {
+      if (item.registrationNo.toLowerCase().contains(query.toLowerCase())) {
+        examFetch.add(item);
+      }
+    }
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(examFetch[index].toString()),
+        );
+      },
+      itemCount: examFetch.length,
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    List<Student> examFetch = [];
+    for (var item in exams) {
+      if (item.registrationNo.toLowerCase().contains(query.toLowerCase())) {
+        examFetch.add(item);
+      }
+    }
+    return ListView.builder(
+      itemBuilder: (context, index) {
+        return ListTile(
+          title: Text(examFetch[index].toString()),
+        );
+      },
+      itemCount: examFetch.length,
     );
   }
 }

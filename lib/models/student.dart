@@ -56,5 +56,53 @@ class DummyStudent {
       courseCode: "CS 312",
       yearOfStudy: "1st Year",
     ),
+    Student(
+      registrationNo: "T/UDOM/2018/06416",
+      fullName: "George Ayoub",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/06400",
+      fullName: "Peter Mkane",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/06468",
+      fullName: "Ibtisam Suleiman",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/06416",
+      fullName: "George Ayoub",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/00125",
+      fullName: "Angel Getrude",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/11376",
+      fullName: "Ismail Ramadan Mkumbi",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "T/UDOM/2018/06465",
+      fullName: "Alex Mhando",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
+    Student(
+      registrationNo: "L/UDOM/2018/00133",
+      fullName: "Beatrice Gbanlon",
+      courseCode: "312",
+      yearOfStudy: "1st Year",
+    ),
   ];
 }
