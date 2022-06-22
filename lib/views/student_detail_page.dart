@@ -2,6 +2,7 @@ import 'package:dasiapp/widgets/mainDrawer.dart';
 import 'package:flutter/material.dart';
 
 class StudentDetailPage extends StatelessWidget {
+  
   static const routeName = '/student-Details';
   const StudentDetailPage({Key? key}) : super(key: key);
   Widget buildDetail(String info, String data, IconData icons) {

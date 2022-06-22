@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class ForgotPassword extends StatefulWidget {
   static const routeName = '/forgot-page';
@@ -30,25 +31,29 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 28),
             child: Form(
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextFormField(
-                    keyboardType: TextInputType.emailAddress,
-                    autofocus: true,
-                    decoration: InputDecoration(
-                      label: const Text('Enter Email Address'),
-                      prefixIcon: Icon(Icons.email_outlined),
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xff4B72D9)),
+                      keyboardType: TextInputType.emailAddress,
+                      autofocus: true,
+                      decoration: InputDecoration(
+                        label: const Text('Enter Email Address'),
+                        prefixIcon: Icon(Icons.email_outlined),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(color: Color(0xff4B72D9)),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide(color: Color(0xff4B72D9)),
+                        ),
                       ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(color: Color(0xff4B72D9)),
-                      ),
-                    ),
-                  ),
+                      validator: MultiValidator([
+                        EmailValidator(errorText: "Invalid Email Address"),
+                        // RequiredValidator(errorText: "Required*")
+                      ])),
                 ],
               ),
             ),

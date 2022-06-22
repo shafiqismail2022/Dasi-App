@@ -1,7 +1,10 @@
 import 'package:dasiapp/controller/table_controller.dart';
+import 'package:dasiapp/views/option_scanning.dart';
 import 'package:dasiapp/widgets/exam_table.dart';
 import 'package:dasiapp/widgets/mainDrawer.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:http/http.dart';
 import '../models/student.dart';
 
 class AttendancePage extends StatefulWidget {
@@ -68,7 +71,7 @@ class _AttendancePageState extends State<AttendancePage> {
         centerTitle: true,
         backgroundColor: Color(0xff4B72D9),
         title: customizeinput('Search', Colors.white, () {}),
-       actions: [
+        actions: [
           IconButton(
             onPressed: () {
               // setState(() {
@@ -95,7 +98,7 @@ class _AttendancePageState extends State<AttendancePage> {
 }
 
 class CustomSearch extends SearchDelegate {
-  List<Student> exams = DummyStudent.dummyStudentList ;
+  List<Student> exams = DummyStudent.dummyStudentList;
   @override
   List<Widget>? buildActions(BuildContext context) {
     return [
@@ -130,7 +133,7 @@ class CustomSearch extends SearchDelegate {
     return ListView.builder(
       itemBuilder: (context, index) {
         return ListTile(
-          title: Text(examFetch[index].toString()),
+          title: Text(examFetch[index].registrationNo),
         );
       },
       itemCount: examFetch.length,
@@ -147,8 +150,26 @@ class CustomSearch extends SearchDelegate {
     }
     return ListView.builder(
       itemBuilder: (context, index) {
-        return ListTile(
-          title: Text(examFetch[index].toString()),
+        return Column(
+          children: [
+            ListTile(
+              onTap: () => Get.to(ScanningOption()),
+              leading: CircleAvatar(
+                backgroundColor: Color(0xff4B72D9),
+                radius: 30,
+                child: Text(
+                  examFetch[index].courseCode,
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              trailing: Text(examFetch[index].fullName),
+              title: Text(
+                examFetch[index].registrationNo,
+              ),
+              subtitle: Text(examFetch[index].yearOfStudy),
+            ),
+            const Divider(),
+          ],
         );
       },
       itemCount: examFetch.length,

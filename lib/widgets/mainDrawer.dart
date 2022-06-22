@@ -62,7 +62,8 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xff4B72D9),
             ),
             buildListTile('Change Password', Icons.key_outlined, () {
-              Navigator.of(context).pushReplacementNamed(ChangePasswordPage.routeName);
+              Navigator.of(context)
+                  .pushReplacementNamed(ChangePasswordPage.routeName);
             }),
             const Divider(
               color: Color(0xff4B72D9),
@@ -73,6 +74,7 @@ class MainDrawer extends StatelessWidget {
             const Divider(
               color: Color(0xff4B72D9),
             ),
+            buildListTile('Help', Icons.help_outline, () => {}),
           ],
         ));
   }
