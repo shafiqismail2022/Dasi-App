@@ -75,6 +75,7 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xff4B72D9),
             ),
             buildListTile('Help', Icons.help_outline, () => {}),
+            const Divider(),
           ],
         ));
   }
