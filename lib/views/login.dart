@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:dasiapp/apiservice/api_calls.dart';
 import 'package:dasiapp/views/depatrment.dart';
 import 'package:dasiapp/views/forgetPassword.dart';
 import 'package:dasiapp/views/homepage.dart';
@@ -87,7 +88,8 @@ class _LoginPageState extends State<LoginPage> {
                       validator: RequiredValidator(errorText: "Required*")),
                   TextButton(
                     onPressed: () {
-                      Navigator.of(context).pushNamed(ForgotPassword.routeName);
+                      ApiCall.getUser();
+                      //rNavigator.of(context).pushNamed(ForgotPassword.routeName);
                     },
                     child: const Text(
                       'Forgot password',
@@ -111,7 +113,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             onPressed: () {
-              // login();
+              ApiCall.getUser();
               Navigator.of(context).pushNamed(DepartmentPage.routeName);
               //  Navigator.of(context).pushNamed(StudentDetailPage.routeName);
             },

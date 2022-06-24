@@ -41,21 +41,23 @@ class DepartmentPage extends StatelessWidget {
         title: const Text("Choose Department"),
       ),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            buildCard('CSE', () {
-              Navigator.of(context).pushNamed(Homepage.routeName);
-            }),
-            buildCard('IST', () {
-              Navigator.of(context).pushNamed(UndefinedViewPage.name);
-            }),
-            buildCard('ETE', () {
-              Navigator.of(context).pushNamed(UndefinedViewPage.name);
-            })
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              buildCard('CSE', () {
+                Navigator.of(context).pushNamed(Homepage.routeName);
+              }),
+              buildCard('IST', () {
+                Navigator.of(context).pushNamed(UndefinedViewPage.name);
+              }),
+              buildCard('ETE', () {
+                Navigator.of(context).pushNamed(UndefinedViewPage.name);
+              })
+            ],
+          ),
         ),
       ),
     );
